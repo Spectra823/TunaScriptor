@@ -11,7 +11,7 @@ the final word.
 > 🚧 **Work in progress.** TunaScriptor is under active development and is not yet ready to be installed or
 > used on other computers. See [Development status](#development-status) below.
 
-![Main window: piano roll with the transcribed parts and the list of cifrados (demo data, earlier build)](docs/img/mainwindowfoto.png)
+![Main window: piano roll with the transcribed parts and the list of cifrados (demo data, earlier build)](docs/img/mainwindowfoto.PNG)
 
 ## Contents
 - [Why TunaScriptor](#why-tunascriptor)
