@@ -11,7 +11,9 @@ the final word.
 > 🚧 **Work in progress.** TunaScriptor is under active development and is not yet ready to be installed or
 > used on other computers. See [Development status](#development-status) below.
 
-![Main window: piano roll with the transcribed parts and the list of cifrados (demo data, earlier build)](docs/img/mainwindowfoto.PNG)
+<p align="center">
+  <img src="./mainwindowfoto.PNG" width="85%" alt="Analysis Main Window"/>
+</p>
 
 ## Contents
 - [Why TunaScriptor](#why-tunascriptor)
@@ -100,7 +102,6 @@ not been fully tried with real recordings or hardware · 🔧 being actively rew
 | PDF export (with crest image and author) | ✅ | |
 | Editable export and import: native format, MusicXML tablature, ChordPro, MIDI | ✅ | MusicXML has not yet been checked in MuseScore |
 
-![Bandurria cifrado editor (demo data, earlier build)](docs/img/tab_editor_dark.png)
 
 ## How it works
 
