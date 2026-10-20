@@ -183,17 +183,6 @@ packaging/    early Windows packaging scripts (PyInstaller / Inno Setup), not ye
 | Testing, version control and documentation | 🔄 Ongoing: the automated test suite, tagged versions and changelog are in place |
 | Installation and setup instructions for other computers | 📋 Planned, once the application is ready |
 
-## Documentation
-
-Setup instructions and fuller documentation will be added once the application is ready for other
-computers. In the meantime, these notes describe the current state:
-
-- [Project status and how each feature was verified](docs/STATUS.md)
-- [Architecture](docs/ARCHITECTURE.md)
-- [Tuna notation decisions](docs/NOTATION_DECISIONS.md)
-- [Melody analysis notes](docs/MELODY_ANALYSIS.md) · [Chords](docs/CHORDS.md) · [Repeated sections](docs/REPEATS.md)
-- [User guide (Spanish, work in progress)](docs/USER_GUIDE.md)
-- [Changelog](CHANGELOG.md)
 
 ## Licence
 
