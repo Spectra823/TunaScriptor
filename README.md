@@ -1,9 +1,9 @@
 # TunaScriptor
 
 # Readme in different languages
-[![en](https://img.shields.io/badge/readme-en-blue?style=flat)](https://github.com/Spectra823/MelAdvisor/blob/main/README.md)
-[![es](https://img.shields.io/badge/readme-es-yellow?style=flat)](https://github.com/Spectra823/MelAdvisor/blob/main/README.es.md)
-[![fr](https://img.shields.io/badge/readme-fr-red?style=flat)](https://github.com/Spectra823/MelAdvisor/blob/main/README.fr.md)
+[![en](https://img.shields.io/badge/readme-en-blue?style=flat)](https://github.com/Spectra823/TunaScriptor/blob/main/README.md)
+[![es](https://img.shields.io/badge/readme-es-yellow?style=flat)](https://github.com/Spectra823/TunaScriptor/blob/main/README.es.md)
+[![fr](https://img.shields.io/badge/readme-fr-red?style=flat)](https://github.com/Spectra823/TunaScriptor/blob/main/README.fr.md)
 
 **From a recording to an editable *cifrado* for the instruments of a Spanish *tuna*.**
 
