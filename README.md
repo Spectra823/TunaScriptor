@@ -171,7 +171,7 @@ environment: PyTorch, MuScriptor, Chordify, Whisper and librosa.
 
 ## Licence
 
-The application code is released under the [MIT License](LICENSE).
+The application code is released under the GPL-3.0 License [License](LICENSE).
 
 The analysis engines and models are third-party software with their own terms, and they are not included
 in this repository. In particular, the MuScriptor model weights are licensed **CC BY-NC 4.0** with gated
