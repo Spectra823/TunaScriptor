@@ -52,4 +52,6 @@ override anything below.
 * FFmpeg (LGPL/GPL depending on build): only for M4A/MP4/AAC and similar formats. Not bundled in this version. If a future release bundles it, use an LGPL build and ship its licence and source offer.
 
 ## 5. Recordings
-The app ships no copyrighted recordings. Test fixtures are synthesised by the test-suite itself.
+FreePats Spanish Classical Guitar (2019-06-18). These public domain samples are used as the default guitar playback option.
+MDM Classical guitar pack is available to download but requires that each user downloads it on the pack's page with a free Pianobook account.
+Bandurria playback uses Manuel Carrasco Moñino's recordings as default: https://github.com/manolo/sound-fonts (Licence: Creative Commons Zero v1.0 Universal).
