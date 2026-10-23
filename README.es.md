@@ -22,6 +22,7 @@ para poderse compartir posteriormente en PDF o archivos editables.
 - [Razones de desarrollo](#razones)
 - [Desarrollo actual](#desarrollo-actual)
 - [Funcionamiento](#funcionamiento)
+- [Características actuales](#características-actuales)
 - [Estructura del programa](#estructura-programa)
 - [Licencia](#licencia)
 
@@ -81,7 +82,41 @@ o incluso cambiando la tonalidad de secciones (o de la canción entera si así s
 de una misma canción). También puede añadirse letra sobre cada sección del cifrado (en los cifrados de guitarra, esta aparece de forma automática).
 Antes de exportar puedes escuchar el cifrado para ver si te convence. Este playback utiliza samples de instrumentos reales (véase [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
 Por último, los cifrados pueden exportarse tanto en PDF como en archivos editables (uno propio de TunaScriptor, y el otro .musicxml, usado en otros programas como MuseScore o GuitarPro).
-  
+
+## Características actuales
+
+Leyenda: ✅ funciona y se realizaron tests automáticos · 🧪 funciona, pero los resultados no son
+del todo fiables o no se ha probado con hardware real todavía · 🔧 en proceso
+
+### Análisis
+| Funcionalidad | Estado | Notas |
+|---|---|---|
+| Transcripción de notas de una grabación, una pista por instrumento | ✅ 🧪 | Utiliza el modelo MuScriptor; la calidad depende de la grabación y del tamaño del modelo |
+| Melodía principal (★): una sola línea para toda la canción, la voz cuando alguien canta y el instrumento principal en los demás pasajes | 🔧 | Los pasajes cantados se siguen con bastante fiabilidad. En los pasajes instrumentales todavía aparecen notas espurias o faltan algunas |
+| Melodía vocal con separación de voz opcional | ✅ 🧪 | El vibrato se mantiene como una sola nota; las sílabas repetidas se conservan como notas separadas |
+| Reconocimiento de acordes (Chordify) y de letras (Whisper) | ✅ 🧪 | La precisión de los acordes se está validando con evidencias independientes; el reconocimiento de las letras depende del modelo |
+| Comparación de los acordes revisados por TunaScriptor con los originales de Chordify | ✅ | Script de desarrollo; las discrepancias se evalúan contrastándolas con las notas y el audio |
+| Secciones repetidas (estrofa, estribillo, variaciones, BIS) | 🔧 | Funciona con muchas canciones, pero algunas todavía se dividen en demasiados fragmentos |
+
+### Cifrados y edición
+| Funcionalidad | Estado | Notas |
+|---|---|---|
+| Cifrados de bandurria y laúd a partir de cualquier parte transcrita | ✅ | Reglas de notación de tuna (trémolo, espaciado, repeticiones y siempre seis líneas), digitación al estilo de tuna y notación del laúd igual que la de la bandurria |
+| Cifrados de guitarra: letras con acordes colocados sobre las sílabas | ✅ 🧪 | Nombres de acordes en español (LAm, MI7…); la colocación sigue la temporización de las palabras y los acordes |
+| Nuevo cifrado cantando al micrófono (guitarra, bandurria y laúd) | 🧪 | Añadido recientemente; probado con grabaciones sintéticas, pero todavía no con un micrófono real |
+| Transposición (por semitonos, a una tonalidad o a una tesitura vocal) con previsualización audible | ✅ | Se vuelven a elegir las cuerdas y los trastes; las notas fuera de rango se señalan, nunca se desplazan silenciosamente |
+| Edición de notas en piano roll, editores de cifrados y deshacer/rehacer | ✅ | Las notas y palabras dudosas se resaltan para su revisión |
+| Voces, solistas, colores y leyenda en los cifrados de guitarra | ✅ | |
+
+### Reproducción, guardado y exportación
+| Funcionalidad | Estado | Notas |
+|---|---|---|
+| Reproducción de la grabación, las notas o un fragmento seleccionado, con la partitura resaltada durante la reproducción | ✅ 🧪 | Las previsualizaciones utilizan sonidos sintetizados sencillos |
+| Acompañamiento de guitarra generado a partir de un cifrado de guitarra, con la voz separada como opción | 🔧 | La sincronización está garantizada por construcción; el sonido todavía es básico |
+| Biblioteca musical, análisis guardados, cifrados independientes, carpetas, guardado automático y recuperación tras fallos | ✅ | Los análisis originales nunca se sobrescriben; se conservan los resultados anteriores de la melodía |
+| Exportación a PDF (con imagen del escudo y autor) | ✅ | |
+| Exportación e importación editables: formato nativo, tablatura MusicXML, ChordPro y MIDI | ✅ | MusicXML todavía no se ha comprobado en MuseScore |
+
 ## Estructura del programa
 El programa se divide en dos tipos de proceso, para que los modelos de análisis musical no impidan o entorpezcan
 la edición de cifrados.
