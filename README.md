@@ -23,11 +23,9 @@ the final word.
 ## Contents
 - [Why TunaScriptor](#why-tunascriptor)
 - [Development status](#development-status)
-- [What it does today](#what-it-does-today)
 - [How it works](#how-it-works)
-- [Repository layout](#repository-layout)
-- [Roadmap](#roadmap)
-- [Documentation](#documentation)
+- [What it does today](#what-it-does-today)
+- [Layout](#layout)
 - [Licence](#licence)
 
 ## Why TunaScriptor
@@ -73,6 +71,25 @@ Each change is measured before it is kept: the repository has an automated test 
 scripts, and written records of what was measured and why (see [docs/STATUS.md](docs/STATUS.md) and
 [CHANGELOG.md](CHANGELOG.md)).
 
+## How it works
+At the beginning, you will need to follow the installation guide, where you will see which tools are being downloaded and be able to choose the ones you want. You will also need to accept some model license agreements, as these steps could not be automated or simplified any further for legal reasons.
+
+There are several ways to start creating a cifrado in TunaScriptor: you can import an MP3 file for analysis, write one from scratch using a template, or record audio through your microphone to obtain an approximation.
+
+All imported files are saved in the "Music Library". There, you will find all your songs, along with their associated cover images if available, as well as additional information: the number of analyses and cifrados for each song, its duration, and its import date.
+
+Below, you will also find a list of all existing cifrados, including details such as their type, creation date, and so on. When you open a song, the cifrados associated with it will appear at the top of this list.
+
+Once you have imported the song you want to work with, the analysis interface will open. Here, you can choose the type of analysis you want to perform: guitar or bandurria/laúd, as well as the models to use for the analysis. Several models are available, some of which are larger and more accurate but require powerful computers and take longer to run. Others are lighter and are intended for computers that cannot run the more demanding models.
+
+You will see a progress bar as the analysis proceeds. If you chose guitar cifrado, you will be able to use it immediately. If you chose laúd/bandurria, you will be able to inspect the analysis results, including the tracks for the different instruments in the song, the detected notes, and so on. To create the cifrado, simply click the "Create Cifrado" button. In this interface, you can choose which track to use as the basis for the cifrado. The recommended option is the track that follows the main melody (the singer's voice, if there is one, or the dominant instrument during purely instrumental passages). This is the track I have tested the most for creating cifrados, but you can choose whichever track you prefer and edit each track as you wish before creating the cifrado.
+
+Once created, the cifrado will identify repeated sections to make it as compact and readable as possible. However, you can still edit it by adding, removing, or changing notes; adding or deleting sections; or even changing the key of individual sections (or the entire song, if desired). This feature was implemented to simplify the creation of cifrados for different vocal parts of the same song. You can also add lyrics to each section of the cifrado (in guitar cifrados, these are added automatically).
+
+Before exporting, you can listen to the cifrado to see whether you are happy with the result. This playback uses samples of real instruments (see [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)).
+
+Finally, cifrados can be exported either as PDF files or as editable files: one in TunaScriptor's own format and the other in `.musicxml`, which is supported by other programs such as MuseScore and Guitar Pro.
+
 ## What it does today
 
 Legend: ✅ works and is covered by automated tests · 🧪 works, but results are still unreliable or it has
@@ -108,7 +125,7 @@ not been fully tried with real recordings or hardware · 🔧 being actively rew
 | Editable export and import: native format, MusicXML tablature, ChordPro, MIDI | ✅ | MusicXML has not yet been checked in MuseScore |
 
 
-## How it works
+## Layout
 
 The application is split into two kinds of processes, so that heavy machine-learning models never freeze
 the editor or crash it:
@@ -151,43 +168,6 @@ More detail: [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md).
 
 **Main technologies:** Python, PySide6 (Qt 6), NumPy, SQLite, ReportLab (PDF), mido (MIDI). In the engine
 environment: PyTorch, MuScriptor, Chordify, Whisper and librosa.
-
-## Repository layout
-
-```
-src/tunacifrado/
-  app/        start-up and the application context
-  ui/         main window, library, piano roll, cifrado editors, dialogs
-  cifrado/    bandurria/laúd and guitar cifrado models, fingering, chords, harmonisation,
-              repeats and song structure, transposition, sung cifrados
-  music/      note/track model, melody results and their versions, MIDI
-  playback/   audio player, note and guitar synthesis, microphone recording, voice mix
-  library/    SQLite database, autosave, file and analysis service
-  export/     PDF and editable interchange formats
-  engines/    engine environment, process runner and the standalone engine workers
-  core/       paths, settings, logging, file helpers
-tests/        automated tests (logic, offscreen GUI, and optional real-engine integration tests)
-scripts/      developer tools: benchmarks, regression checks, chord comparison, screenshots
-docs/         architecture, status, notation decisions, analysis notes, user guide (Spanish)
-packaging/    early Windows packaging scripts (PyInstaller / Inno Setup), not yet in use
-```
-
-## Roadmap
-
-| Area | Status |
-|---|---|
-| Main melody: fewer spurious and missing notes | 🔄 In progress: false notes during singing have been reduced, while notes that only the newer tracker finds are kept |
-| Keep the reliable vocal tracking while improving instrumental passages | 🔄 In progress |
-| Recognise repeated estrofas and instrumental sections without excessive fragmentation | 🔄 In progress: whole sections and variations are detected; some songs are still fragmented |
-| Guitar chord accuracy and lyric alignment | 🔄 In progress: a repeatable comparison against Chordify and the audio is in place |
-| Lyrics clean-up that removes only real video boilerplate | ✅ Done |
-| Cifrados made by singing: accuracy with real microphone recordings | 🔍 Needs investigation: so far tested only with synthetic recordings |
-| Playback quality and synchronisation | 🔄 In progress |
-| UI reliability and fixing regressions | 🔄 Ongoing |
-| Analysis speed, responsiveness and resource use | 📋 Planned |
-| Testing, version control and documentation | 🔄 Ongoing: the automated test suite, tagged versions and changelog are in place |
-| Installation and setup instructions for other computers | 📋 Planned, once the application is ready |
-
 
 ## Licence
 
