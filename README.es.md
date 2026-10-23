@@ -165,7 +165,7 @@ Más detalles en: [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md).
 análisis: PyTorch, MuScriptor, Chordify, Whisper y librosa.
 
 ## Licencia
-El código de esta aplicación es publicado bajo la licencia [MIT License](LICENSE).
+El código de esta aplicación es publicado bajo la licencia GPL-3.0 [License](LICENSE).
 
 Los modelos y herramients de análisis son software externos con sus propias licencias y condiciones,
 y no están incluidos en el código. En particular, los pesos de los modelos de MuScriptor están publicados
