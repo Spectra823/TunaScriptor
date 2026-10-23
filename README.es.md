@@ -21,10 +21,9 @@ para poderse compartir posteriormente en PDF o archivos editables.
 ## Índice
 - [Razones de desarrollo](#razones)
 - [Desarrollo actual](#desarrollo-actual)
-- [Cómo funciona](#funcionamiento)
+- [Funcionamiento](#funcionamiento)
 - [Estructura del programa](#estructura-programa)
 - [Plan de desarrollo](#plan-desarrollo)
-- [Documentación](#documentación)
 - [Licencia](#licencia)
 
 ## Razones de desarrollo
@@ -58,7 +57,10 @@ actuales, que permita el uso de nuestros sistemas de numeración para bandurrias
   los samples utilizados para el sonido de guitarra etc. Pero trato de acortar y simplificar esos procesos todo lo posible, incluyendo guías claras en el propio
   programa de cómo instalar todo paso a paso.
 
-  ## Cómo funciona
+  ## Funcionamiento
+
+  
+  ## Estructura del programa
   El programa se divide en dos tipos de proceso, para que los modelos de análisis musical no impidan o entorpezcan
   la edición de cifrados.
 
@@ -103,3 +105,11 @@ Más detalles en: [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md).
 **Principales herramientas:** Python, PySide6 (Qt 6), NumPy, SQLite, ReportLab (PDF), mido (MIDI). En el
 análisis: PyTorch, MuScriptor, Chordify, Whisper y librosa.
 
+## Plan de desarrollo
+
+## Licencia
+El código de esta aplicación es publicado bajo la licencia [MIT License](LICENSE).
+
+Los modelos y herramients de análisis son software externos con sus propias licencias y condiciones,
+y no están incluidos en el código. En particular, los pesos de los modelos de MuScriptor están publicados
+bajo la licencia **CC BY-NC 4.0** con condiciones de acceso restringidas. Véase [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
