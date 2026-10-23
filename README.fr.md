@@ -142,6 +142,7 @@ Le programme est divisé en deux types de processus afin que les modèles d'anal
 │ melody_worker.py      mélodie principale / vocale (librosa ; séparation    │
 │                       facultative de la voix avec Mel-Band RoFormer)       │
 └────────────────────────────────────────────────────────────────────────────┘
+```
 
 - **Transcription** (bandurria et luth) : MuScriptor transcrit l'enregistrement en distinguant les différents instruments présents et en créant une piste pour chacun d'eux.
 Il recherche ensuite la mélodie principale — celle qui suit la voix et les instruments les plus importants lorsqu'il n'y a pas de voix — et la sépare du reste dans une autre piste.
