@@ -23,7 +23,6 @@ para poderse compartir posteriormente en PDF o archivos editables.
 - [Desarrollo actual](#desarrollo-actual)
 - [Funcionamiento](#funcionamiento)
 - [Estructura del programa](#estructura-programa)
-- [Plan de desarrollo](#plan-desarrollo)
 - [Licencia](#licencia)
 
 ## Razones de desarrollo
@@ -41,7 +40,7 @@ Además, TunaScriptor puede utilizarse como un simple editor de cifrados para aq
 actuales, que permita el uso de nuestros sistemas de numeración para bandurrias y laudes.
 
 ## Desarrollo actual
- **De momento, todo puede cambiar.** Tanto la arquitectura básica como los algoritmos de análisis, tipos de archivo utilizados, e interfaz están taodavía
+ **De momento, todo puede cambiar.** Tanto la arquitectura básica como los algoritmos de análisis, tipos de archivo utilizados, e interfaz están todavía
  en proceso, por ello prefiero no ofrecer todavía descargas hasta que no esté contenta con una versión.
 - **Resultados varían de canción a canción.** Aquellas canciones acapella o solo con un instrumento son las que ofrecen mejores resultados
   por el momento. Cuando se introducen muchos intrumentos solapados o armonías, pueden empeorar los análisis. El objetivo es mejorar
@@ -58,7 +57,24 @@ actuales, que permita el uso de nuestros sistemas de numeración para bandurrias
   programa de cómo instalar todo paso a paso.
 
   ## Funcionamiento
-
+  Al principio, deberás seguir la guía de instalación, en la que verá que herramientas se están descargando, y podrá elegir aquellas que desee. Dberá también aceptar
+  algunas condiciones de licencias de estos modelos, pasos que no se pudieron automatizar o simplificar más por razones legales.
+  Hay distintas formas de comenzar un cifrado en TunaScriptor: Puedes importar un mp3 para analizar, escribir uno desde cero en una plantilla, o grabar desde tu micrófono para obtener una aproxiamción.
+  Todos los archivos importados se guardan en la "Biblioteca de música". En ella encontrarás todas tus canciones con
+  la imagen apropiada si tenían alguna, así como información adicional: número de análisis y cifrados de la canción, duración y fecha de importación.
+  A su vez, se muestra abajo una lista de todos los cifrados existentes, detallando su tipo, fecha de creación etc. Al abrir una canción, se muestran al principio de esta lista aquellos cifrados relacionados con ella.
+  Una vez ya tienes la canción que deseas importada, se abrirá la interfaz de análisis, en ella puedes escoger el tipo de análisis que quieres realizar: para guitarra o bandurria/laúd y los modelos
+  a usar en este (existen distintos modelos disponibles, algunos más pesados y precisos, pero requieren ordenadores potentes y son más lentos. Otros más ligeros, para ordenadores que
+  no puedan utilizar mejores modelos).
+  Verás una barra de progreso a medida que avanza el análisis. Si escogiste el cifrado de guitarra, podrás disfrutar directamente de él. Si escogiste laúd/bandurria, podrás observar
+  el análisis realizado, así como las pistas de los distintos instrumentos de la canción, las notas recogidas etc. Para crear el cifrado, hay un botón de "Crear cifrado". En esta interfaz podrás escoger en base a qué pista
+  se crea. La más recomendada es aquella que sigue la melodía principal (la voz del cantante en caso de que lo haya, o el instrumento dominante en partes únicamente instrumentales). Esta pista es la más
+  testeada por mi para realizar cifrados, pero puedes escoger a tu gusto y editar cada pista como desees antes de crear los cifrados.
+  Una vez creado el cifrado, este buscará las partes repetidas para ser lo más compacto y legible posible. Aún así, puede editarse añadiendo, quitando o cambiando notas, añadiendo o borrando secciones
+  o incluso cambiando la tonalidad de secciones (o de la canción entera si así se desea. Esto fue implementado con el objetivo de simplificar la creación de cifrados de distintas voces
+  de una misma canción). También puede añadirse letra sobre cada sección del cifrado (en los cifrados de guitarra, esta aparece de forma automática).
+  Antes de exportar puedes escuchar el cifrado para ver si te convence. Este playback utiliza samples de instrumentos reales (véase [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
+  Por último, los cifrados pueden exportarse tanto en PDF como en archivos editables (uno propio de TunaScriptor, y el otro .musicxml, usado en otros programas como MuseScore o GuitarPro).
   
   ## Estructura del programa
   El programa se divide en dos tipos de proceso, para que los modelos de análisis musical no impidan o entorpezcan
@@ -104,8 +120,6 @@ Más detalles en: [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md).
 
 **Principales herramientas:** Python, PySide6 (Qt 6), NumPy, SQLite, ReportLab (PDF), mido (MIDI). En el
 análisis: PyTorch, MuScriptor, Chordify, Whisper y librosa.
-
-## Plan de desarrollo
 
 ## Licencia
 El código de esta aplicación es publicado bajo la licencia [MIT License](LICENSE).
