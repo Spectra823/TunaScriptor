@@ -30,10 +30,12 @@ Dado que no se requiere una educación formal en música para participar en una 
 cifrados tradicionales o crear cifrados propios desde cero de canciones que nos gusten. A pesar de que el aprender a "sacar" una canción de oido es una habilidad
 crucial para todo tuno, y también algo muy entretenido una vez se le coge el tranquillo, esto resulta muy complejo al principio sobre todo para aquellos que carecemos de esta formación
 al inicio.
+
 Por ello, para ayudar a mis compañeros y tratar de simplificar un poco este proceso, sobre todo para novatos que estén empezando sus andanzas en el mundo tunil
 y no tengan mucha idea, decidí crear este programa. Al principio iba a ser un pequeño script de Python para ayudarme en mis comienzos a transcribir canciones,
 pero con el desarrollo de herramientas de análisis musical más precisas estos últimos años, creí conveniente ampliar los objetivos y crear algo más complejo
 y util.
+
 De nuevo, recalcar que esta herramienta no busca sustituir el sacar canciones de oído, pues creo que es una habilidad que todos deberíamos tratar de aprender y pulir
 cuanto podamos, pero creo que puede ser tanto una muleta útil en los comienzos como una ayuda en momentos en que dispongamos de poco tiempo para sacar un cifrado.
 Además, TunaScriptor puede utilizarse como un simple editor de cifrados para aquellos que prefieran escribirlos desde cero, pero requieran un programa más cómodo que las alternativas
@@ -59,17 +61,21 @@ actuales, que permita el uso de nuestros sistemas de numeración para bandurrias
   ## Funcionamiento
   Al principio, deberás seguir la guía de instalación, en la que verá que herramientas se están descargando, y podrá elegir aquellas que desee. Dberá también aceptar
   algunas condiciones de licencias de estos modelos, pasos que no se pudieron automatizar o simplificar más por razones legales.
+  
   Hay distintas formas de comenzar un cifrado en TunaScriptor: Puedes importar un mp3 para analizar, escribir uno desde cero en una plantilla, o grabar desde tu micrófono para obtener una aproxiamción.
   Todos los archivos importados se guardan en la "Biblioteca de música". En ella encontrarás todas tus canciones con
   la imagen apropiada si tenían alguna, así como información adicional: número de análisis y cifrados de la canción, duración y fecha de importación.
+  
   A su vez, se muestra abajo una lista de todos los cifrados existentes, detallando su tipo, fecha de creación etc. Al abrir una canción, se muestran al principio de esta lista aquellos cifrados relacionados con ella.
   Una vez ya tienes la canción que deseas importada, se abrirá la interfaz de análisis, en ella puedes escoger el tipo de análisis que quieres realizar: para guitarra o bandurria/laúd y los modelos
   a usar en este (existen distintos modelos disponibles, algunos más pesados y precisos, pero requieren ordenadores potentes y son más lentos. Otros más ligeros, para ordenadores que
   no puedan utilizar mejores modelos).
+  
   Verás una barra de progreso a medida que avanza el análisis. Si escogiste el cifrado de guitarra, podrás disfrutar directamente de él. Si escogiste laúd/bandurria, podrás observar
   el análisis realizado, así como las pistas de los distintos instrumentos de la canción, las notas recogidas etc. Para crear el cifrado, hay un botón de "Crear cifrado". En esta interfaz podrás escoger en base a qué pista
   se crea. La más recomendada es aquella que sigue la melodía principal (la voz del cantante en caso de que lo haya, o el instrumento dominante en partes únicamente instrumentales). Esta pista es la más
   testeada por mi para realizar cifrados, pero puedes escoger a tu gusto y editar cada pista como desees antes de crear los cifrados.
+  
   Una vez creado el cifrado, este buscará las partes repetidas para ser lo más compacto y legible posible. Aún así, puede editarse añadiendo, quitando o cambiando notas, añadiendo o borrando secciones
   o incluso cambiando la tonalidad de secciones (o de la canción entera si así se desea. Esto fue implementado con el objetivo de simplificar la creación de cifrados de distintas voces
   de una misma canción). También puede añadirse letra sobre cada sección del cifrado (en los cifrados de guitarra, esta aparece de forma automática).
