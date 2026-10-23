@@ -7,7 +7,7 @@
 
 **From a recording to an editable *cifrado* for the instruments of a Spanish *tuna*.**
 
-TunaScriptor (called *Tuna Cifrado Studio* in parts of the code and interface, name is not yet final and will be changed once development is completed) is a desktop application that
+Hi everyone, I'm Cáscara! Novice at the Tuna Femenina de Salamanca. This project is in no way related to my tuna (if something doesn't work as planned, it's in no way their fault), but my few years of experience in this band are what has led me to building this tool. TunaScriptor (called *Tuna Cifrado Studio* in parts of the code and interface, name is not yet final and will be changed once development is completed) is a desktop application that
 listens to a song and helps you write it down the way tuna musicians actually read music: string-and-fret
 *cifrados* for bandurria and laúd, and lyrics-with-chords sheets for guitar. The analysis runs locally,
 and everything it produces stays editable, because automatic transcription is a starting point, not
