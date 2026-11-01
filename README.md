@@ -30,26 +30,17 @@ the final word.
 
 ## Why TunaScriptor
 
-In a *tuna* — the traditional Spanish student music ensemble — the bandurrias and laúdes play the melody and
-its counter-voices, and the guitars accompany the singing. Most players don't read staff notation. They read
-**cifrados**:
+Many members of Spanish *tunas* do not have a formal musical education, so reading conventional musical transcriptions can be quite difficult. This is why, when it comes to transcriptions for the lute and bandurria, we use a simpler notation system called *cifrado*. The problem is that, since this system is exclusive to these musical groups, there is no existing software that supports the creation and editing of these transcriptions. As a result, writing down songs and sharing them can be quite complicated, usually requiring handmade Word documents or old-fashioned handwritten notes.
 
-- for **bandurria and laúd**, a six-line tablature of fret numbers (one line per pair of strings), with the
-  tuna's own conventions for tremolo, fast passages, pauses and repeats (BIS, ×N);
-- for **guitar**, the lyrics with the chords written above the syllables where they change.
+Furthermore, given that many members have little or no musical training, they often struggle to work out the notes or chords of the songs they want to play. Although there are quite a few websites offering guitar chords, the songs we play in *tunas* are usually niche or traditional, meaning that finding transcriptions online can be difficult. As for the bandurria and lute, there are practically no resources available beyond the few songbooks produced by the *tunas* themselves.
 
-Writing these by ear from a recording takes a lot of time, and that is still how most of them are made.
-TunaScriptor aims to do the first draft automatically:
+Of course, learning to figure out a song by ear is a very useful skill, but it can be quite difficult for new members to develop, especially those with no musical background.
 
-- find the **main melody** (sung or instrumental) and the other parts of a recording;
-- turn a part into a playable **bandurria or laúd cifrado**, choosing strings and frets the way a tuna
-  player would;
-- recognise the **lyrics and chords** of a song and lay them out as a **guitar cifrado**;
-- notice **repeated sections** (estrofas, estribillos) so they are written once, not ten times;
-- let you **listen, correct and print** the result.
+That's why I wanted to build something useful that could help with all of these issues. I initially envisioned it as a small Python script to help with basic song transcription, but given the recent advances in music analysis software, I thought it would be a good idea to expand the scope of the project.
 
-It is meant for tuna members and arrangers, teachers preparing material for new members, and anyone who
-wants a readable cifrado of a song without transcribing it note by note.
+My goal is to help fellow *tuna* members, especially newcomers who might be struggling to find their way around these things. Learning to transcribe songs by ear is still a crucial skill that all *tuna* members should develop, but I know first-hand just how complicated and frustrating it can be when you're starting out. In these situations, I believe TunaScriptor can be a handy tool to support the learning process, or simply a time-saving aid when you don't have enough time to figure out a song on your own.
+
+And even if you're not interested in its musical analysis and transcription features, TunaScriptor can still be used as a simple editor that supports the *cifrado* notation systems used in *tunas*.
 
 ## Development status
 
