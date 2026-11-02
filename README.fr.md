@@ -84,6 +84,18 @@ différentes voix d'une même chanson. Vous pouvez également ajouter les parole
 Avant l'exportation, vous pouvez écouter le cifrado afin de vérifier si le résultat vous convient. La lecture utilise des échantillons d'instruments réels (voir THIRD_PARTY_NOTICES.md).
 Enfin, les cifrados peuvent être exportés au format PDF ou dans des fichiers éditables : un format propre à TunaScriptor et le format .musicxml, utilisé par d'autres logiciels tels que MuseScore ou Guitar Pro.
 
+<p align="center">
+  <img src="./cancion.PNG" width="85%" alt="Bandurria_cifrado"/>
+</p>
+
+<p align="center">
+  <img src="./guitarra.PNG" width="85%" alt="guitarra_cifrado"/>
+</p>
+
+<p align="center">
+  <img src="./guitarra_cifrado.PNG" width="75%" alt="guitarra_export"/>
+</p>
+
 ## Fonctionnalités actuelles
 
 Légende : ✅ fonctionne et a fait l'objet de tests automatisés · 🧪 fonctionne, mais les résultats ne sont pas entièrement fiables ou n'a pas encore été testé avec du matériel réel · 🔧 en cours de développement
