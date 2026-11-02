@@ -71,6 +71,10 @@ All imported files are saved in the "Music Library". There, you will find all yo
 
 Below, you will also find a list of all existing cifrados, including details such as their type, creation date, and so on. When you open a song, the cifrados associated with it will appear at the top of this list.
 
+<p align="center">
+  <img src="./biblioteca musical.PNG" width="85%" alt="biblioteca_musical"/>
+</p>
+
 Once you have imported the song you want to work with, the analysis interface will open. Here, you can choose the type of analysis you want to perform: guitar or bandurria/laúd, as well as the models to use for the analysis. Several models are available, some of which are larger and more accurate but require powerful computers and take longer to run. Others are lighter and are intended for computers that cannot run the more demanding models.
 
 You will see a progress bar as the analysis proceeds. If you chose guitar cifrado, you will be able to use it immediately. If you chose laúd/bandurria, you will be able to inspect the analysis results, including the tracks for the different instruments in the song, the detected notes, and so on. To create the cifrado, simply click the "Create Cifrado" button. In this interface, you can choose which track to use as the basis for the cifrado. The recommended option is the track that follows the main melody (the singer's voice, if there is one, or the dominant instrument during purely instrumental passages). This is the track I have tested the most for creating cifrados, but you can choose whichever track you prefer and edit each track as you wish before creating the cifrado.
@@ -80,6 +84,18 @@ Once created, the cifrado will identify repeated sections to make it as compact 
 Before exporting, you can listen to the cifrado to see whether you are happy with the result. This playback uses samples of real instruments (see [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)).
 
 Finally, cifrados can be exported either as PDF files or as editable files: one in TunaScriptor's own format and the other in `.musicxml`, which is supported by other programs such as MuseScore and Guitar Pro.
+
+<p align="center">
+  <img src="./cancion.PNG" width="85%" alt="Bandurria_cifrado"/>
+</p>
+
+<p align="center">
+  <img src="./guitarra.PNG" width="85%" alt="guitarra_cifrado"/>
+</p>
+
+<p align="center">
+  <img src="./guitarra_cifrado.PNG" width="75%" alt="guitarra_export"/>
+</p>
 
 ## What it does today
 
