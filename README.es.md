@@ -85,6 +85,18 @@ de una misma canción). También puede añadirse letra sobre cada sección del c
 Antes de exportar puedes escuchar el cifrado para ver si te convence. Este playback utiliza samples de instrumentos reales (véase [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
 Por último, los cifrados pueden exportarse tanto en PDF como en archivos editables (uno propio de TunaScriptor, y el otro .musicxml, usado en otros programas como MuseScore o GuitarPro).
 
+<p align="center">
+  <img src="./cancion.PNG" width="85%" alt="Bandurria_cifrado"/>
+</p>
+
+<p align="center">
+  <img src="./guitarra.PNG" width="85%" alt="guitarra_cifrado"/>
+</p>
+
+<p align="center">
+  <img src="./guitarra_cifrado.PNG" width="75%" alt="guitarra_export"/>
+</p>
+
 ## Características actuales
 
 Leyenda: ✅ funciona y se realizaron tests automáticos · 🧪 funciona, pero los resultados no son
